@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反焦虑周刊 - 分享你的思考</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <h1>反焦虑周刊</h1>
+            </div>
+            <p class="tagline">在这里，分享你的思考，温暖每一颗心灵</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="publish-section">
+                <h2>写下你的想法</h2>
+                <form id="thoughtForm" class="thought-form">
+                    <input type="text" id="thoughtAuthor" placeholder="你的昵称" required>
+                    <textarea id="thoughtContent" placeholder="今天有什么想分享的？..." required></textarea>
+                    <button type="submit" class="submit-btn">发布想法</button>
+                </form>
+            </section>
+
+            <section class="thoughts-section">
+                <h2>大家的心声</h2>
+                <div id="thoughtsContainer" class="thoughts-container">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>🌿 反焦虑周刊 - 让每一个想法都被看见</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

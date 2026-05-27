@@ -1,0 +1,4 @@
+node_modules/
+anxious.db
+.DS_Store
+.env
