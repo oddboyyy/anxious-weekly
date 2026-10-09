@@ -28,7 +28,11 @@ function initDatabase() {
       time TEXT NOT NULL,
       likes INTEGER DEFAULT 0
     )
-  `);
+  `, (err) => {
+    if (err) {
+      console.error('Error creating thoughts table:', err);
+    }
+  });
 
   db.run(`
     CREATE TABLE IF NOT EXISTS comments (
@@ -39,9 +43,13 @@ function initDatabase() {
       time TEXT NOT NULL,
       FOREIGN KEY (thought_id) REFERENCES thoughts(id)
     )
-  `);
-
-  insertMockData();
+  `, (err) => {
+    if (err) {
+      console.error('Error creating comments table:', err);
+    } else {
+      insertMockData();
+    }
+  });
 }
 
 function insertMockData() {
